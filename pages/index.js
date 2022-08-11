@@ -12,9 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className="text-xl font-bold font-mono">Dollar Smart</h1>
-      </main>
+      <h1 className="text-xl font-bold font-mono">Dollar Smart</h1>
     </div>
   );
 }
