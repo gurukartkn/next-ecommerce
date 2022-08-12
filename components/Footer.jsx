@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="border-t px-4 divide-y">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-        <div className="lg:w-1/3">
+        <div className="flex justify-center lg:w-1/3">
           <Link href="/">
             <a className="flex items-center gap-3">
               <Image

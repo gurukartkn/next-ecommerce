@@ -3,11 +3,15 @@ import Image from "next/image";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="rounded-lg bg-white shadow-md max-w-[320px] h-[380px]">
+    <div className="rounded-lg bg-white shadow-md min-w-[304px] max-w-[320px] h-[380px]">
       <Link href={`/product/${product.id}`} key={product.id}>
         <a className="flex flex-col justify-center">
           <Image
-            src={product.images[0]}
+            src={
+              product.images == "null"
+                ? `https://api.lorem.space/image/any?w=640&h=480&r=${Math.random()}`
+                : product.images[0]
+            }
             alt={product.title}
             className="rounded-t-lg"
             width={640}
