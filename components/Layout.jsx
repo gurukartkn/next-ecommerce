@@ -1,10 +1,12 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className="bg-slate-50">{children}</main>
+      <Footer />
     </>
   );
 };
