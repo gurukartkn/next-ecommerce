@@ -8,6 +8,6 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ["api.lorem.space", "placeimg.com"],
+    domains: ["api.lorem.space", "placeimg.com", "images.unsplash.com"],
   },
 };

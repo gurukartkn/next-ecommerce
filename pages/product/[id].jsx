@@ -4,9 +4,12 @@ import Link from "next/link";
 
 import Counter from "../../components/Counter";
 import ProductCard from "../../components/ProductCard";
+import { useHorizontalScroll } from "../../hooks/useSideScroll";
 
 const Product = ({ product, similarProducts }) => {
+  const scrollRef = useHorizontalScroll();
   const [count, setCount] = useState(1);
+
   return (
     <div className="flex flex-col p-5 lg:p-10">
       <div className="flex flex-col md:flex-row md:gap-10 shadow-lg rounded-lg p-5 bg-white">
@@ -83,7 +86,10 @@ const Product = ({ product, similarProducts }) => {
       </div>
       <div className="mt-5">
         <h2 className="text-xl font-bold">Similar Products</h2>
-        <div className="py-3 flex gap-5 overflow-x-scroll scrollbar-hide">
+        <div
+          ref={scrollRef}
+          className="py-3 flex gap-5 overflow-x-scroll scrollbar-hide"
+        >
           {similarProducts.map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}
